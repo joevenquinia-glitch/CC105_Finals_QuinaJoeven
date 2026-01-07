@@ -24,9 +24,8 @@ Includes an SQL script to create the database, tables, and sample data.
 - Relationships:
   - `Products.supplier_id` → `Suppliers.supplier_id`
   - `Orders.product_id` → `Products.product_id`
-
-## How to Run
-1. Open the HTML files in any web browser to view forms and tables.  
-2. To test the database:
-   - Open `inventory.sql` in MySQL Workbench or any MySQL client
-   - Run the script to create the database and populate sample data
+    
+## Challenges and Learning
+- Finding the proper platform to creat the system
+- Creation of the actual system proved to be challenging
+- But every step was a learning process in wchich allowed me to navigate the entire directive
