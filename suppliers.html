@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inventory System - Suppliers</title>
+<style>
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f5;
+    margin: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #c71585;
+}
+
+form {
+    background: #f8d0eb;
+    padding: 15px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+input, button {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #c71585;
+}
+
+button {
+    background: #ff69b4;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c71585;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+th {
+    background: #ff69b4;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #ff69b4;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #ffe6f2;
+}
+
+tr:hover {
+    background: #ffcce6;
+}
+</style>
+<script>
+function validateForm() {
+    let name = document.forms["supplierForm"]["name"].value;
+    let contact = document.forms["supplierForm"]["contact"].value;
+    if(name == "" || contact == "") {
+        alert("Both fields are required!");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<h2>🏭 Suppliers</h2>
+<form name="supplierForm" action="#" method="post" onsubmit="return validateForm()">
+    Name: <input type="text" name="name" placeholder="Enter supplier name">
+    Contact: <input type="text" name="contact" placeholder="Enter contact info">
+    <button type="submit">Add Supplier</button>
+</form>
+
+<table>
+<tr><th>ID</th><th>Name</th><th>Contact</th></tr>
+<tr><td>1</td><td>Supplier A</td><td>contactA@email.com</td></tr>
+<tr><td>2</td><td>Supplier B</td><td>contactB@email.com</td></tr>
+</table>
+
+</body>
+</html>
